@@ -1,0 +1,159 @@
+.container {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: var(--bg);
+}
+
+.content {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  animation: slideUp 0.4s ease;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.logoIcon {
+  width: 52px;
+  height: 52px;
+  background: var(--accent);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-accent);
+}
+
+.logoText {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  color: var(--accent);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text);
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-top: -16px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.levelList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 320px;
+  overflow-y: auto;
+  padding-right: 4px;
+  margin: -4px 0;
+}
+
+.levelItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--surface);
+  border: 1.5px solid transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.18s ease;
+  text-align: left;
+}
+
+.levelItem:hover {
+  background: var(--card-hover);
+  border-color: rgba(245,197,24,0.2);
+}
+
+.levelSelected {
+  background: var(--accent-glow) !important;
+  border-color: var(--accent) !important;
+}
+
+.levelNum {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  min-width: 44px;
+}
+
+.levelSelected .levelNum {
+  color: var(--accent);
+}
+
+.levelSets {
+  flex: 1;
+  font-size: 14px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.levelTotal {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.checkmark {
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.actions .btn {
+  flex: 1;
+}

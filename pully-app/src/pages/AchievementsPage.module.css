@@ -1,0 +1,190 @@
+.page {
+  padding: 20px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: fadeIn 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 32px 32px 40px;
+  }
+}
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pageTitle {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.progress {
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+}
+
+.progressNum {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--accent);
+}
+
+.progressTotal {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* Progress card */
+.progressCard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.ringWrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.ringInner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ringPct {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--accent);
+}
+
+.statsGrid {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.statItem {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.statVal {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1;
+}
+
+.statLbl {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+/* Achievement grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+@media (min-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.achieveCard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.achieveCard.unlocked {
+  border-color: rgba(245, 197, 24, 0.35);
+  background: linear-gradient(135deg, rgba(245,197,24,0.06) 0%, var(--card) 100%);
+}
+
+.achieveCard.locked {
+  opacity: 0.45;
+  filter: grayscale(0.6);
+}
+
+.achieveIcon {
+  font-size: 32px;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.unlocked .achieveIcon {
+  animation: none;
+}
+
+.achieveCard.unlocked:hover .achieveIcon {
+  transform: scale(1.15);
+}
+
+.achieveTitle {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.achieveDesc {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.unlockedBadge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-glow);
+  border: 1px solid rgba(245,197,24,0.3);
+  padding: 3px 8px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}

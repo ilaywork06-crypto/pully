@@ -1,0 +1,231 @@
+.page {
+  padding: 20px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: fadeIn 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 32px 32px 40px;
+  }
+}
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pageTitle {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.currentBadge {
+  background: var(--accent-glow);
+  color: var(--accent);
+  border: 1px solid rgba(245,197,24,0.3);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.levelRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+}
+
+.levelRow.completed {
+  opacity: 0.6;
+}
+
+.levelRow.current {
+  background: linear-gradient(135deg, rgba(245,197,24,0.08) 0%, var(--card) 100%);
+  border-color: rgba(245,197,24,0.4);
+  box-shadow: 0 0 0 1px rgba(245,197,24,0.1), var(--shadow);
+}
+
+.levelRow.locked {
+  opacity: 0.45;
+}
+
+/* Status indicators */
+.levelStatus {
+  flex-shrink: 0;
+}
+
+.statusDone {
+  width: 24px;
+  height: 24px;
+  background: rgba(74, 222, 128, 0.15);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--success);
+}
+
+.statusCurrent {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pulseDot {
+  width: 10px;
+  height: 10px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(245,197,24,0.4);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245,197,24,0.4); }
+  50% { box-shadow: 0 0 0 6px rgba(245,197,24,0); }
+}
+
+.statusLocked {
+  width: 24px;
+  height: 24px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
+/* Level info */
+.levelInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.levelNum {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.current .levelNum {
+  color: var(--accent);
+}
+
+/* Session mini-dots on current level */
+.sessionMini {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 4px 0 2px;
+}
+
+.miniDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  border: 1.5px solid rgba(255,255,255,0.18);
+  flex-shrink: 0;
+}
+
+.miniDotDone {
+  background: var(--success);
+  border-color: var(--success);
+}
+
+.sessionMiniText {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-left: 2px;
+}
+
+.currentTag {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: var(--accent);
+  color: #000;
+  padding: 2px 7px;
+  border-radius: 10px;
+}
+
+.levelSets {
+  display: flex;
+  gap: 4px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.setChip {
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.chipPU {
+  background: rgba(245,197,24,0.1);
+  color: var(--accent);
+}
+
+.chipCU {
+  background: rgba(147, 197, 253, 0.1);
+  color: #93c5fd;
+}
+
+/* Total */
+.levelTotal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+.totalNum {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1;
+}
+
+.current .totalNum {
+  color: var(--accent);
+}
+
+.totalLabel {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
